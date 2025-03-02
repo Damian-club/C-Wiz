@@ -2,7 +2,7 @@
 
 <div align="center">
 <img src="./c-wiz-logo.png" alt="C-Wiz Logo" width="130">
-<p align="center">C-Wiz es una plataforma de código libre para compartir audio</p>
+<p align="center">C-Wiz es una plataforma de código libre para compartir audio.</p>
 </div>
 
 ## Documentación
