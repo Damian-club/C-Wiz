@@ -15,3 +15,4 @@
 - API fácil de utilizar con una documentación completa. 🖥️
 - Algoritmo que favorece a creadores pequeños. ⚙️
 - Diseño simple, intuitivo y amigable. 🎨
+- Da los primeros pasos en el mundo musical. 😎
