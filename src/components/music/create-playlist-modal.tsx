@@ -47,7 +47,7 @@ export function CreatePlaylistModal({ isOpen, onClose, onCreate }: CreatePlaylis
 
   const handleSuggestTitle = async () => {
     if (selectedTrackIds.size === 0) {
-      toast({ title: "Select Tracks First", description: "Please select some tracks to suggest a title.", variant: "default" });
+      toast({ title: "Primero elige las canciones", description: "Porfavor selecciona algunas canciones para recomendar un título.", variant: "default" });
       return;
     }
     setIsSuggestingTitle(true);
@@ -55,10 +55,10 @@ export function CreatePlaylistModal({ isOpen, onClose, onCreate }: CreatePlaylis
       const tracksForSuggestion = mockTracks.filter(t => selectedTrackIds.has(t.id)).map(t => t.title);
       const suggestion = await suggestPlaylistTitle({ tracks: tracksForSuggestion });
       setPlaylistName(suggestion.title);
-      toast({ title: "AI Suggested Title!", description: `"${suggestion.title}" has been set as playlist name.` });
+      toast({ title: "¡Título de IA recomendado!", description: `"${suggestion.title}" ha sido seleccionado como el nombre de la playlist.` });
     } catch (error) {
-      console.error("Error suggesting title:", error);
-      toast({ title: "AI Suggestion Failed", description: "Could not generate a title.", variant: "destructive" });
+      console.error("Error sugiriendo el título:", error);
+      toast({ title: "Sugerencia de IA fallida", description: "No se pudo generar el título.", variant: "destructive" });
     } finally {
       setIsSuggestingTitle(false);
     }
@@ -66,11 +66,11 @@ export function CreatePlaylistModal({ isOpen, onClose, onCreate }: CreatePlaylis
 
   const handleCreatePlaylist = () => {
     if (!playlistName.trim()) {
-      toast({ title: "Playlist Name Required", description: "Please enter a name for your playlist.", variant: "destructive" });
+      toast({ title: "Nombre de la playlist requerido", description: "Porfavor ingrese el nombre de su playlist.", variant: "destructive" });
       return;
     }
     if (selectedTrackIds.size === 0) {
-      toast({ title: "No Tracks Selected", description: "Please select at least one track for your playlist.", variant: "destructive" });
+      toast({ title: "Sin canciones seleccionadas", description: "Porfavor seleccione al menos una canción en su playlist.", variant: "destructive" });
       return;
     }
 
@@ -94,7 +94,7 @@ export function CreatePlaylistModal({ isOpen, onClose, onCreate }: CreatePlaylis
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
           <DialogTitle className="font-headline">Create New Playlist</DialogTitle>
-          <DialogDescription>Select tracks and give your playlist a name. You can also let AI suggest a title!</DialogDescription>
+          <DialogDescription>Selecciona las canciones y dale un nombre a tu playlist. ¡También puedes permitirle a la IA sugerirte un título!</DialogDescription>
         </DialogHeader>
         
         <div className="grid gap-4 py-4">
@@ -105,13 +105,13 @@ export function CreatePlaylistModal({ isOpen, onClose, onCreate }: CreatePlaylis
               value={playlistName} 
               onChange={(e) => setPlaylistName(e.target.value)} 
               className="col-span-3"
-              placeholder="My Awesome Playlist"
+              placeholder="Mi Maravillosa Playlist"
             />
           </div>
 
           <Button onClick={handleSuggestTitle} variant="outline" disabled={isSuggestingTitle || selectedTrackIds.size === 0}>
             {isSuggestingTitle && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            Suggest Title with AI
+            Sugiere un nombre con IA
           </Button>
           
           <div>
@@ -140,7 +140,7 @@ export function CreatePlaylistModal({ isOpen, onClose, onCreate }: CreatePlaylis
             <Button type="button" variant="outline">Cancel</Button>
           </DialogClose>
           <Button type="button" onClick={handleCreatePlaylist} disabled={!playlistName.trim() || selectedTrackIds.size === 0}>
-            Create Playlist
+            Crear Playlist
           </Button>
         </DialogFooter>
       </DialogContent>
