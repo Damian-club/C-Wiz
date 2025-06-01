@@ -16,7 +16,7 @@ export default function HomePage() {
     <div className="space-y-12">
       <section>
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="font-headline text-3xl font-semibold">Featured Artists</h2>
+          <h2 className="font-headline text-3xl font-semibold">Artistas Recomendados</h2>
           {/* <Button variant="link" asChild><Link href="/artists">View All</Link></Button> */}
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
