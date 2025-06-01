@@ -66,13 +66,13 @@ export function MusicPlayerBar() {
 
         <div className="flex flex-col items-center justify-center w-1/3">
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" onClick={prevTrack} aria-label="Previous track">
+            <Button variant="ghost" size="icon" onClick={prevTrack} aria-label="Canción anterior">
               <SkipBack />
             </Button>
-            <Button variant="ghost" size="icon" onClick={togglePlayPause} className="h-10 w-10" aria-label={isPlaying ? "Pause" : "Play"}>
+            <Button variant="ghost" size="icon" onClick={togglePlayPause} className="h-10 w-10" aria-label={isPlaying ? "Pausa" : "Reproducir"}>
               {isPlaying ? <Pause size={28} /> : <Play size={28} />}
             </Button>
-            <Button variant="ghost" size="icon" onClick={nextTrack} aria-label="Next track">
+            <Button variant="ghost" size="icon" onClick={nextTrack} aria-label="Siguiente canción">
               <SkipForward />
             </Button>
           </div>
@@ -94,7 +94,7 @@ export function MusicPlayerBar() {
         <div className="flex items-center justify-end w-1/3 gap-2">
           {/* Future: Queue button <Button variant="ghost" size="icon"><ListMusic /></Button> */}
           <div className="flex items-center w-24 gap-1">
-            <Button variant="ghost" size="icon" onClick={() => setVolume(volume > 0 ? 0 : 0.5)} aria-label={volume > 0 ? "Mute" : "Unmute"}>
+            <Button variant="ghost" size="icon" onClick={() => setVolume(volume > 0 ? 0 : 0.5)} aria-label={volume > 0 ? "Mutear" : "Desmutear"}>
               {volume === 0 ? <VolumeX /> : <Volume2 />}
             </Button>
             <Slider 
@@ -107,7 +107,7 @@ export function MusicPlayerBar() {
               aria-label="Volume"
             />
           </div>
-          <Button variant="ghost" size="icon" onClick={() => setIsFsPlayerModalOpen(true)} aria-label="Fullscreen player">
+          <Button variant="ghost" size="icon" onClick={() => setIsFsPlayerModalOpen(true)} aria-label="Reproductor de pantalla completa">
             <Maximize2 />
           </Button>
         </div>
