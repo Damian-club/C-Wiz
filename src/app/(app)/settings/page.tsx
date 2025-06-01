@@ -88,12 +88,12 @@ export default function SettingsPage() {
     <div className="container mx-auto max-w-2xl py-8">
       <Card>
         <CardHeader>
-          <CardTitle className="font-headline text-3xl">Settings</CardTitle>
-          <CardDescription>Customize the look and feel of C-Wiz.</CardDescription>
+          <CardTitle className="font-headline text-3xl">Configuración</CardTitle>
+          <CardDescription>Personaliza la apariencia de C-Wiz.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="theme-mode-switch" className="text-lg font-medium">Theme Mode</Label>
+            <Label htmlFor="theme-mode-switch" className="text-lg font-medium">Modo Temático</Label>
             <div className="flex items-center space-x-2">
               <Switch
                 id="theme-mode-switch"
@@ -105,7 +105,7 @@ export default function SettingsPage() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="primary-color" className="text-lg font-medium">Primary Color</Label>
+            <Label htmlFor="primary-color" className="text-lg font-medium">Color Primario</Label>
             <Input
               id="primary-color"
               type="color"
@@ -115,7 +115,7 @@ export default function SettingsPage() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="background-color" className="text-lg font-medium">Background Color</Label>
+            <Label htmlFor="background-color" className="text-lg font-medium">Color de Fondo</Label>
              <Input
               id="background-color"
               type="color"
@@ -123,10 +123,10 @@ export default function SettingsPage() {
               onChange={(e) => handleColorChange('background', e.target.value)}
               className="h-10 w-full"
             />
-             <p className="text-xs text-muted-foreground">Note: Changing background may require app refresh for all elements to update if not all derived colors are handled by JavaScript.</p>
+             <p className="text-xs text-muted-foreground">Nota: Cambiar el fondo puede requerir que se actualice la aplicación para que todos los elementos se actualicen si JavaScript no maneja todos los colores derivados.</p>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="accent-color" className="text-lg font-medium">Accent Color</Label>
+            <Label htmlFor="accent-color" className="text-lg font-medium">Color de acento</Label>
              <Input
               id="accent-color"
               type="color"
@@ -136,7 +136,7 @@ export default function SettingsPage() {
             />
           </div>
           <Button onClick={resetColors} variant="outline" className="w-full">
-            Reset to Default Colors
+            Restablecer colores predeterminados
           </Button>
         </CardContent>
       </Card>
