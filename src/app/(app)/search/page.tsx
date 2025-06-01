@@ -56,7 +56,7 @@ export default function SearchPage() {
         <h1 className="font-headline text-4xl font-bold mb-6">Search</h1>
         <Input
           type="search"
-          placeholder="Search for artists, songs, or albums..."
+          placeholder="Buscar artistas, canciones o álbumes..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="text-lg p-4 rounded-lg"
@@ -66,9 +66,9 @@ export default function SearchPage() {
       {debouncedQuery.trim() && (
         <Tabs defaultValue="tracks" className="w-full">
           <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="tracks">Tracks ({searchResults.tracks.length})</TabsTrigger>
-            <TabsTrigger value="artists">Artists ({searchResults.artists.length})</TabsTrigger>
-            <TabsTrigger value="albums">Albums ({searchResults.albums.length})</TabsTrigger>
+            <TabsTrigger value="tracks">Canciones ({searchResults.tracks.length})</TabsTrigger>
+            <TabsTrigger value="artists">Artistas ({searchResults.artists.length})</TabsTrigger>
+            <TabsTrigger value="albums">Álbumes ({searchResults.albums.length})</TabsTrigger>
           </TabsList>
           
           <TabsContent value="tracks">
@@ -88,7 +88,7 @@ export default function SearchPage() {
                 </div>
               </ScrollArea>
             ) : (
-              <p className="text-muted-foreground text-center py-8">No tracks found for "{debouncedQuery}".</p>
+              <p className="text-muted-foreground text-center py-8">No se encontraron canciones para "{debouncedQuery}".</p>
             )}
           </TabsContent>
 
@@ -100,7 +100,7 @@ export default function SearchPage() {
                 </div>
               </ScrollArea>
             ) : (
-              <p className="text-muted-foreground text-center py-8">No artists found for "{debouncedQuery}".</p>
+              <p className="text-muted-foreground text-center py-8">No se encontraron artistas para "{debouncedQuery}".</p>
             )}
           </TabsContent>
 
@@ -112,7 +112,7 @@ export default function SearchPage() {
                 </div>
               </ScrollArea>
             ) : (
-              <p className="text-muted-foreground text-center py-8">No albums found for "{debouncedQuery}".</p>
+              <p className="text-muted-foreground text-center py-8">No se encontraron álbumes para "{debouncedQuery}".</p>
             )}
           </TabsContent>
         </Tabs>
