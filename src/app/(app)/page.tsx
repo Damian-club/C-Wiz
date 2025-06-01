@@ -28,7 +28,7 @@ export default function HomePage() {
 
       <section>
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="font-headline text-3xl font-semibold">New Albums</h2>
+          <h2 className="font-headline text-3xl font-semibold">Álbumes Nuevos</h2>
           {/* <Button variant="link" asChild><Link href="/albums">View All</Link></Button> */}
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
@@ -40,8 +40,8 @@ export default function HomePage() {
 
       <section>
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="font-headline text-3xl font-semibold">Popular Playlists</h2>
-          <Button onClick={() => setIsCreatePlaylistModalOpen(true)}>Create Playlist</Button>
+          <h2 className="font-headline text-3xl font-semibold">PlayList Populares</h2>
+          <Button onClick={() => setIsCreatePlaylistModalOpen(true)}>Crear Playlist</Button>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {mockPlaylists.slice(0, 5).map((playlist) => (
