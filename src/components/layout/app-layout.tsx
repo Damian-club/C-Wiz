@@ -22,7 +22,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   if (loading) {
     return (
       <div className="flex h-screen items-center justify-center">
-        <p className="text-lg font-semibold">Loading C-Wiz...</p>
+        <p className="text-lg font-semibold">Cargando C-Wiz...</p>
       </div>
     );
   }
