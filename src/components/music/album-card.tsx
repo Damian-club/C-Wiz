@@ -41,7 +41,7 @@ export function AlbumCard({ album }: AlbumCardProps) {
               size="icon"
               className="absolute bottom-2 right-2 bg-background/70 hover:bg-primary hover:text-primary-foreground text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full h-10 w-10"
               onClick={handlePlayAlbum}
-              aria-label={`Play ${album.title}`}
+              aria-label={`Reproducir ${album.title}`}
             >
               <PlayCircle size={28} />
             </Button>
