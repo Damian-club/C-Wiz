@@ -36,26 +36,26 @@ export function AuthForm({ mode }: AuthFormProps) {
   return (
     <>
       <CardHeader>
-        <CardTitle className="font-headline text-2xl">{mode === 'login' ? 'Login to C-Wiz' : 'Sign Up for C-Wiz'}</CardTitle>
+        <CardTitle className="font-headline text-2xl">{mode === 'login' ? 'Iniciar sesión a C-Wiz' : 'Registrarse a C-Wiz'}</CardTitle>
         <CardDescription>
-          {mode === 'login' ? "Enter your credentials to access your music." : "Create an account to start your musical journey."}
+          {mode === 'login' ? "Ingrese sus credenciales para acceder a tu música." : "Crea una cuenta para iniciar tu jornada musical."}
         </CardDescription>
       </CardHeader>
       <form onSubmit={handleSubmit}>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">Correo</Label>
             <Input
               id="email"
               type="email"
-              placeholder="you@example.com"
+              placeholder="tucorreo@ejemplo.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
+            <Label htmlFor="password">Contraseña</Label>
             <Input
               id="password"
               type="password"
@@ -70,12 +70,12 @@ export function AuthForm({ mode }: AuthFormProps) {
         </CardContent>
         <CardFooter className="flex flex-col space-y-3">
           <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-            {mode === 'login' ? 'Login' : 'Sign Up'}
+            {mode === 'login' ? 'Iniciar sesión' : 'Registrarse'}
           </Button>
            <p className="text-center text-sm text-muted-foreground">
-            {mode === 'login' ? "Don't have an account?" : "Already have an account?"}{' '}
+            {mode === 'login' ? "¿No tienes una cuenta?" : "¿Ya tienes una cuenta?"}{' '}
             <Link href={mode === 'login' ? '/signup' : '/login'} className="font-medium text-primary hover:underline">
-              {mode === 'login' ? 'Sign up' : 'Login'}
+              {mode === 'login' ? 'Registrarse' : 'Iniciar sesión'}
             </Link>
           </p>
         </CardFooter>
