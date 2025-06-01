@@ -73,20 +73,20 @@ export default function AlbumPage() {
           width={200}
           height={200}
           className="rounded-lg shadow-xl aspect-square object-cover border-4 border-background"
-          data-ai-hint={album.dataAiHint || "album art large"}
+          data-ai-hint={album.dataAiHint || "carátula del álbum grande"}
           priority
         />
         <div className="flex-1 text-center md:text-left">
           <p className="text-sm font-semibold text-primary">Album</p>
           <h1 className="font-headline text-5xl md:text-7xl font-bold break-words">{album.title}</h1>
           <p className="mt-2 text-xl text-muted-foreground">{album.artist}</p>
-          <p className="mt-1 text-sm text-muted-foreground">{album.year} &bull; {album.tracks.length} songs</p>
+          <p className="mt-1 text-sm text-muted-foreground">{album.year} &bull; {album.tracks.length} canciones</p>
           <div className="mt-6 flex gap-3 justify-center md:justify-start">
              <Button size="lg" onClick={handlePlayAll} className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <PlayCircle className="mr-2 h-5 w-5" /> Play Album
+              <PlayCircle className="mr-2 h-5 w-5" /> Reproducir Álbum
             </Button>
             <Button size="lg" variant="outline" onClick={handleShufflePlay}>
-              <Shuffle className="mr-2 h-5 w-5" /> Shuffle
+              <Shuffle className="mr-2 h-5 w-5" /> Aleatorio
             </Button>
           </div>
         </div>
