@@ -53,7 +53,7 @@ export default function SearchPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="font-headline text-4xl font-bold mb-6">Search</h1>
+        <h1 className="font-headline text-4xl font-bold mb-6">Buscar</h1>
         <Input
           type="search"
           placeholder="Buscar artistas, canciones o álbumes..."
