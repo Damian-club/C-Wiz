@@ -35,7 +35,7 @@ export default function LibraryPage() {
       <Tabs defaultValue="playlists" className="w-full">
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="playlists">Playlists</TabsTrigger>
-          <TabsTrigger value="albums">álbumes</TabsTrigger>
+          <TabsTrigger value="albums">Álbumes</TabsTrigger>
           <TabsTrigger value="tracks">Canciones que me gustaron</TabsTrigger>
         </TabsList>
 
