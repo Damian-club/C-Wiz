@@ -8,7 +8,8 @@ export default function AuthLayout({
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-background p-4">
       <div className="mb-8 flex items-center space-x-2 text-primary">
-        <Music2 className="h-10 w-10" />
+        <img src="/images/logo.png" alt="Logo" className="h-12 w-12"/>
+        {/*<Music2 className="h-10 w-10" />*/}
         <h1 className="font-headline text-4xl font-bold">C-Wiz</h1>
       </div>
       <div className="w-full max-w-md rounded-lg border bg-card p-6 shadow-lg">
