@@ -31,14 +31,14 @@ const prompt = ai.definePrompt({
   name: 'suggestPlaylistTitlePrompt',
   input: {schema: SuggestPlaylistTitleInputSchema},
   output: {schema: SuggestPlaylistTitleOutputSchema},
-  prompt: `You are a creative playlist title generator.
+  prompt: `Eres un generador de nombres de playlist creativos.
 
-  Given the following list of tracks in a playlist, suggest a creative and relevant title for the playlist.
+  Dado el siguiente listado de canciones en una playlist, recomienda un título creativo y relevante para la playlist.
 
-  Tracks:
+  Canciones:
   {{#each tracks}}- {{this}}\n{{/each}}
 
-  Title: `,
+  Título: `,
 });
 
 const suggestPlaylistTitleFlow = ai.defineFlow(
