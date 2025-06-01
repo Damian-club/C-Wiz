@@ -81,26 +81,26 @@ export default function ArtistPage() {
           width={200}
           height={200}
           className="rounded-full shadow-xl aspect-square object-cover border-4 border-background"
-          data-ai-hint={artist.dataAiHint || "artist portrait large"}
+          data-ai-hint={artist.dataAiHint || "retrato del artista grande"}
           priority
         />
         <div className="flex-1 text-center md:text-left">
-          <p className="text-sm font-semibold text-primary">Artist</p>
+          <p className="text-sm font-semibold text-primary">Artista</p>
           <h1 className="font-headline text-5xl md:text-7xl font-bold break-words">{artist.name}</h1>
           <p className="mt-2 text-muted-foreground max-w-xl">{artist.description}</p>
           <div className="mt-6 flex gap-3 justify-center md:justify-start">
             <Button size="lg" onClick={handlePlayAll} className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <PlayCircle className="mr-2 h-5 w-5" /> Play
+              <PlayCircle className="mr-2 h-5 w-5" /> Reproducir
             </Button>
             <Button size="lg" variant="outline" onClick={handleShufflePlay}>
-              <Shuffle className="mr-2 h-5 w-5" /> Shuffle
+              <Shuffle className="mr-2 h-5 w-5" /> Aleatorio
             </Button>
           </div>
         </div>
       </section>
 
       <section>
-        <h2 className="font-headline text-3xl font-semibold mb-6">Top Tracks</h2>
+        <h2 className="font-headline text-3xl font-semibold mb-6">Top Canciones</h2>
         <div className="space-y-2">
           {artist.topTracks.slice(0, 5).map((track, index) => (
             <TrackItem 
@@ -113,14 +113,14 @@ export default function ArtistPage() {
             />
           ))}
           {artist.topTracks.length > 5 && (
-            <Button variant="link" className="mt-2">Show all tracks</Button> // TODO: Implement show all
+            <Button variant="link" className="mt-2">Mostrar todas las canciones</Button> // TODO: Implement show all
           )}
         </div>
       </section>
       
       {artist.albums && artist.albums.length > 0 && (
         <section>
-          <h2 className="font-headline text-3xl font-semibold mb-6">Albums</h2>
+          <h2 className="font-headline text-3xl font-semibold mb-6">Álbumes</h2>
            <ScrollArea className="w-full whitespace-nowrap">
             <div className="flex space-x-4 pb-4">
               {artist.albums.map((album) => (
