@@ -8,6 +8,10 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'C-Wiz Music',
   description: 'Your next-gen music experience.',
+  icons: {
+    icon: '/images/logo.png',
+  },
+  themeColor: '#000000',
 };
 
 export default function RootLayout({
@@ -18,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/images/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />

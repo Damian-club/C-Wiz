@@ -42,7 +42,8 @@ export function SidebarNav() {
     <Sidebar collapsible="icon" variant="sidebar" side="left">
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-2">
-          <Music2 className="h-8 w-8 text-primary" />
+          <img src="/images/logo.png" alt="Logo" className="h-16 w-16"/>
+          {/*<Music2 className="h-8 w-8 text-primary" />*/}
           <h1 className="font-headline text-2xl font-semibold group-data-[collapsible=icon]:hidden">C-Wiz</h1>
         </div>
       </SidebarHeader>
