@@ -25,6 +25,7 @@ export const mockTracks: Track[] = [
   { id: 't22', title: 'Awesome Tanks', artist: 'Santiago G', album: 'Colecciones', duration: '1:07', year: 2025, artwork: '/images/t22.png', audioSrc: '/audio/t22.mp3' },
   { id: 't23', title: 'Salchichón', artist: 'Pou', album: 'Si me lo permite', duration: '1:08', year: 2025, artwork: '/images/t23.png', audioSrc: '/audio/t23.mp3' },
   { id: 't24', title: 'Wuup', artist: 'SG90', album: 'Si me lo permite', duration: '3:34', year: 2025, artwork: '/images/t24.png', audioSrc: '/audio/t24.mp3' },
+  { id: 't25', title: 'Final Dramático (¿?)', artist: 'Santiago G', album: 'Colecciones', duration: '1:46', year: 2025, artwork: '/images/t25.png', audioSrc: '/audio/t25.mp3' },
 ];
 
 export const mockAlbums: Album[] = [
@@ -51,7 +52,7 @@ export const mockAlbums: Album[] = [
   { id: 'a6', title: 'Colecciones', artist: 'Santiago G', year: 2025,
     artwork: '/images/a6.png',
     dataAiHint: 'instrumental and classical',
-    tracks: [mockTracks[15], mockTracks[16], mockTracks[17], mockTracks[18], mockTracks[19], mockTracks[20], mockTracks[21]] },
+    tracks: [mockTracks[15], mockTracks[16], mockTracks[17], mockTracks[18], mockTracks[19], mockTracks[20], mockTracks[21], mockTracks[24] },
   { id: 'a7', title: 'Si me lo permite', artist: 'John Salchichón', year: 2025,
     artwork: '/images/a7.png',
     dataAiHint: 'comedy',
