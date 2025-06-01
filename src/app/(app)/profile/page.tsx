@@ -11,7 +11,7 @@ export default function ProfilePage() {
   const router = useRouter();
 
   if (loading) {
-    return <p>Loading profile...</p>;
+    return <p>Cargando Perfil...</p>;
   }
 
   if (!user) {
@@ -27,17 +27,17 @@ export default function ProfilePage() {
              <AvatarImage src={`https://placehold.co/96x96/151948/fcfcfc.png?text=${user.displayName?.[0] || 'U'}`} alt={user.displayName || "User"} data-ai-hint="user avatar large"/>
             <AvatarFallback className="text-4xl">{user.displayName ? user.displayName[0].toUpperCase() : "U"}</AvatarFallback>
           </Avatar>
-          <CardTitle className="font-headline text-3xl">{user.displayName || "User Profile"}</CardTitle>
+          <CardTitle className="font-headline text-3xl">{user.displayName || "Perfil de Usuario"}</CardTitle>
           <CardDescription>{user.email}</CardDescription>
         </CardHeader>
         <CardContent className="mt-4 space-y-6">
           <div>
-            <h3 className="font-semibold text-lg mb-2">Account Details</h3>
-            <p className="text-muted-foreground">User ID: {user.uid}</p>
+            <h3 className="font-semibold text-lg mb-2">Detalles de la Cuenta</h3>
+            <p className="text-muted-foreground">ID de Usuario: {user.uid}</p>
           </div>
           {/* More profile details can be added here */}
           <Button onClick={logout} variant="destructive" className="w-full">
-            Logout
+            Salir
           </Button>
         </CardContent>
       </Card>
