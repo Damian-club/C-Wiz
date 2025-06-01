@@ -6,8 +6,8 @@ import { PlayerProvider } from '@/contexts/player-context';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'C-Wiz Music',
-  description: 'Your next-gen music experience.',
+  title: 'C-Wiz',
+  description: 'Tu música, tu espacio: fluye con y como tu Playlist favorita, sin miedos, sin límites.',
   icons: {
     icon: '/images/logo.png',
   },
