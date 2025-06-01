@@ -91,15 +91,15 @@ export function CreatePlaylistModal({ isOpen, onClose, onCreate }: CreatePlaylis
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[600px]">
+      <DialogContent className="sm:max-w-[600px] translate-x-[-50%] translate-y-[-50%]">
         <DialogHeader>
-          <DialogTitle className="font-headline">Create New Playlist</DialogTitle>
+          <DialogTitle className="font-headline">Crear Nueva Playlist</DialogTitle>
           <DialogDescription>Selecciona las canciones y dale un nombre a tu playlist. ¡También puedes permitirle a la IA sugerirte un título!</DialogDescription>
         </DialogHeader>
         
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="playlist-name" className="text-right">Name</Label>
+            <Label htmlFor="playlist-name" className="text-right">Nombre</Label>
             <Input 
               id="playlist-name" 
               value={playlistName} 
@@ -115,7 +115,7 @@ export function CreatePlaylistModal({ isOpen, onClose, onCreate }: CreatePlaylis
           </Button>
           
           <div>
-            <Label className="text-md font-medium">Select Tracks ({selectedTrackIds.size})</Label>
+            <Label className="text-md font-medium">Seleccionar Canciones ({selectedTrackIds.size})</Label>
             <ScrollArea className="h-[300px] mt-2 rounded-md border p-2">
               <div className="space-y-2">
                 {mockTracks.map(track => (
