@@ -23,10 +23,10 @@ import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 
 const navItems = [
-  { href: '/', label: 'Home', icon: Home },
-  { href: '/search', label: 'Search', icon: Search },
-  { href: '/library', label: 'Your Library', icon: Library },
-  { href: '/settings', label: 'Settings', icon: Settings },
+  { href: '/', label: 'Inicio', icon: Home },
+  { href: '/search', label: 'Buscar', icon: Search },
+  { href: '/library', label: 'Biblioteca', icon: Library },
+  { href: '/settings', label: 'Configuración', icon: Settings },
 ];
 
 export function SidebarNav() {
@@ -67,7 +67,7 @@ export function SidebarNav() {
       </SidebarContent>
       <SidebarFooter className="p-2 space-y-2">
          <div className="flex items-center justify-between px-2 group-data-[collapsible=icon]:hidden">
-            <Label htmlFor="theme-switch" className="text-sm">Dark Mode</Label>
+            <Label htmlFor="theme-switch" className="text-sm">Modo oscuro</Label>
             <Switch
               id="theme-switch"
               checked={themeMode === 'dark'}
@@ -87,7 +87,7 @@ export function SidebarNav() {
             </Link>
             <Button variant="ghost" onClick={logout} className="w-full justify-start group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:px-0">
               <User className="mr-2 group-data-[collapsible=icon]:mr-0" />
-              <span className="group-data-[collapsible=icon]:hidden">Logout</span>
+              <span className="group-data-[collapsible=icon]:hidden">Salir</span>
             </Button>
           </SidebarGroup>
         ) : (
@@ -95,7 +95,7 @@ export function SidebarNav() {
             <Link href="/login" legacyBehavior passHref>
                 <SidebarMenuButton tooltip="Login" aria-label="Login">
                     <User />
-                    <span>Login</span>
+                    <span>Iniciar sesión</span>
                 </SidebarMenuButton>
             </Link>
           </SidebarGroup>
