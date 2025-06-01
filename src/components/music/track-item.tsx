@@ -55,10 +55,10 @@ export function TrackItem({ track, onPlay, isPlaying, isActive, showArtwork = tr
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          <DropdownMenuItem onClick={() => console.log('Add to queue', track.title)}>Add to queue</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => console.log('Add to playlist', track.title)}>Add to playlist</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => console.log('View artist', track.artist)}>Go to artist</DropdownMenuItem>
-          <DropdownMenuItem onClick={() => console.log('View album', track.album)}>Go to album</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => console.log('Añadir a la lista', track.title)}>Add to queue</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => console.log('Añadir a la playlist', track.title)}>Add to playlist</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => console.log('Ver artista', track.artist)}>Go to artist</DropdownMenuItem>
+          <DropdownMenuItem onClick={() => console.log('Ver álbum', track.album)}>Go to album</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
