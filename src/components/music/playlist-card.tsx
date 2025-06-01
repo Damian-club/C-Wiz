@@ -41,7 +41,7 @@ export function PlaylistCard({ playlist }: PlaylistCardProps) {
               size="icon"
               className="absolute bottom-2 right-2 bg-background/70 hover:bg-primary hover:text-primary-foreground text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full h-10 w-10"
               onClick={handlePlayPlaylist}
-              aria-label={`Play ${playlist.name}`}
+              aria-label={`Reproducir ${playlist.name}`}
             >
               <PlayCircle size={28} />
             </Button>
