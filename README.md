@@ -1,5 +1,19 @@
-# Firebase Studio
+<h1 align="center">C-Wiz</h1>
 
-This is a NextJS starter in Firebase Studio.
+<div align="center">
+<img src="./public/images/logo.png" alt="C-Wiz Logo" width="130">
+<p><em>"Tu música, tu espacio: fluye con y como tu Playlist favorita, sin miedos, sin límites"</em></p>
+<p align="center">C-Wiz es una plataforma de código libre para compartir audio.</p>
+</div>
 
-To get started, take a look at src/app/page.tsx.
+## Documentación
+
+> [!IMPORTANT]
+> En construcción. 🛠️
+
+## Caracteristicas
+
+- API fácil de utilizar con una documentación completa. 🖥️
+- Algoritmo que favorece a creadores pequeños. ⚙️
+- Diseño simple, intuitivo y amigable. 🎨
+- Da los primeros pasos en el mundo musical. 😎
