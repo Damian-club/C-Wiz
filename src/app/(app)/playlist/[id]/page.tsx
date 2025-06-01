@@ -135,23 +135,23 @@ export default function PlaylistPage() {
           width={200}
           height={200}
           className="rounded-lg shadow-xl aspect-square object-cover border-4 border-background"
-          data-ai-hint={playlist.dataAiHint || "playlist cover"}
+          data-ai-hint={playlist.dataAiHint || "portada de playlist"}
           priority
         />
         <div className="flex-1 text-center md:text-left">
           <p className="text-sm font-semibold text-primary">Playlist</p>
           <h1 className="font-headline text-5xl md:text-7xl font-bold break-words">{playlist.name}</h1>
           {playlist.description && <p className="mt-2 text-muted-foreground max-w-xl">{playlist.description}</p>}
-          <p className="mt-1 text-sm text-muted-foreground">{playlist.tracks.length} songs</p>
+          <p className="mt-1 text-sm text-muted-foreground">{playlist.tracks.length} canciones</p>
           <div className="mt-6 flex gap-3 justify-center md:justify-start">
              <Button size="lg" onClick={handlePlayAll} className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <PlayCircle className="mr-2 h-5 w-5" /> Play
+              <PlayCircle className="mr-2 h-5 w-5" /> Reproducir
             </Button>
             <Button size="lg" variant="outline" onClick={handleShufflePlay}>
-              <Shuffle className="mr-2 h-5 w-5" /> Shuffle
+              <Shuffle className="mr-2 h-5 w-5" /> Aleatorio
             </Button>
             <Button size="lg" variant="outline" onClick={handleSuggestTitle}>
-              Suggest Title (AI)
+              Sugerir título (IA)
             </Button>
           </div>
         </div>
@@ -167,12 +167,12 @@ export default function PlaylistPage() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => handleSort('default')}>Default Order</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleSort('default')}>Orden Predeterminado</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => handleSort('title')}><ArrowDownAZ className="mr-2 h-4 w-4" />Title</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleSort('artist')}><UserCircle className="mr-2 h-4 w-4" />Artist</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleSort('title')}><ArrowDownAZ className="mr-2 h-4 w-4" />Titulo</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleSort('artist')}><UserCircle className="mr-2 h-4 w-4" />Artista</DropdownMenuItem>
               <DropdownMenuItem onClick={() => handleSort('album')}><Disc3 className="mr-2 h-4 w-4" />Album</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleSort('year')}><CalendarDays className="mr-2 h-4 w-4" />Year</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleSort('year')}><CalendarDays className="mr-2 h-4 w-4" />Año</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
