@@ -100,7 +100,7 @@ export default function SettingsPage() {
                 checked={themeMode === 'dark'}
                 onCheckedChange={handleThemeModeChange}
               />
-              <span>{themeMode === 'dark' ? 'Dark Mode' : 'Light Mode'}</span>
+              <span>{themeMode === 'dark' ? 'Modo Oscuro' : 'Modo Claro'}</span>
             </div>
           </div>
 
@@ -126,7 +126,7 @@ export default function SettingsPage() {
              <p className="text-xs text-muted-foreground">Nota: Cambiar el fondo puede requerir que se actualice la aplicación para que todos los elementos se actualicen si JavaScript no maneja todos los colores derivados.</p>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="accent-color" className="text-lg font-medium">Color de acento</Label>
+            <Label htmlFor="accent-color" className="text-lg font-medium">Color de Acento</Label>
              <Input
               id="accent-color"
               type="color"
