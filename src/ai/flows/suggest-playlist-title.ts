@@ -14,12 +14,12 @@ import {z} from 'genkit';
 const SuggestPlaylistTitleInputSchema = z.object({
   tracks: z
     .array(z.string())
-    .describe('An array of track names in the playlist.'),
+    .describe('Arreglo de los nombres de las canciones en la playlist.'),
 });
 export type SuggestPlaylistTitleInput = z.infer<typeof SuggestPlaylistTitleInputSchema>;
 
 const SuggestPlaylistTitleOutputSchema = z.object({
-  title: z.string().describe('The suggested title for the playlist.'),
+  title: z.string().describe('Título recomendado para la playlist.'),
 });
 export type SuggestPlaylistTitleOutput = z.infer<typeof SuggestPlaylistTitleOutputSchema>;
 
