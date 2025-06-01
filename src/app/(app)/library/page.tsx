@@ -28,15 +28,15 @@ export default function LibraryPage() {
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
-        <h1 className="font-headline text-4xl font-bold">Your Library</h1>
-        <Button onClick={() => setIsCreatePlaylistModalOpen(true)}>Create Playlist</Button>
+        <h1 className="font-headline text-4xl font-bold">Tu Biblioteca</h1>
+        <Button onClick={() => setIsCreatePlaylistModalOpen(true)}>Crear Playlist</Button>
       </div>
 
       <Tabs defaultValue="playlists" className="w-full">
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="playlists">Playlists</TabsTrigger>
-          <TabsTrigger value="albums">Albums</TabsTrigger>
-          <TabsTrigger value="tracks">Liked Tracks</TabsTrigger>
+          <TabsTrigger value="albums">álbumes</TabsTrigger>
+          <TabsTrigger value="tracks">Canciones que me gustaron</TabsTrigger>
         </TabsList>
 
         <TabsContent value="playlists">
@@ -47,7 +47,7 @@ export default function LibraryPage() {
               ))}
             </div>
           ) : (
-            <p className="text-muted-foreground text-center py-8">You haven't created or saved any playlists yet.</p>
+            <p className="text-muted-foreground text-center py-8">Aún no has creado ni guardado ninguna lista de reproducción.</p>
           )}
         </TabsContent>
 
@@ -59,7 +59,7 @@ export default function LibraryPage() {
               ))}
             </div>
           ) : (
-            <p className="text-muted-foreground text-center py-8">You haven't saved any albums yet.</p>
+            <p className="text-muted-foreground text-center py-8">Aún no has guardado ningún álbum.</p>
           )}
         </TabsContent>
 
@@ -78,7 +78,7 @@ export default function LibraryPage() {
               ))}
             </div>
           ) : (
-            <p className="text-muted-foreground text-center py-8">You haven't liked any tracks yet.</p>
+            <p className="text-muted-foreground text-center py-8">Aún no te ha gustado ninguna canción.</p>
           )}
         </TabsContent>
       </Tabs>
